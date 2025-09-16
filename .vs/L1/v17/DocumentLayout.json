@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\KubSU\\Security\\Lab\\L1\\L1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B3DE2774-5ADC-479E-A5C5-6F5EC8D924B8}|L1\\L1.vcxproj|C:\\KubSU\\Security\\Lab\\L1\\L1\\L1\\L1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B3DE2774-5ADC-479E-A5C5-6F5EC8D924B8}|L1\\L1.vcxproj|solutionrelative:L1\\L1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "L1.cpp",
+              "DocumentMoniker": "C:\\KubSU\\Security\\Lab\\L1\\L1\\L1\\L1.cpp",
+              "RelativeDocumentMoniker": "L1\\L1.cpp",
+              "ToolTip": "C:\\KubSU\\Security\\Lab\\L1\\L1\\L1\\L1.cpp",
+              "RelativeToolTip": "L1\\L1.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-10T14:25:54.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
