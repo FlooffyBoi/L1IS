@@ -1,44 +1,53 @@
-﻿// L1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-#include <iostream>
+﻿#include <iostream>
 #include <string>
-int main()
-{
-    char* input[10000];
-    std::cin >> *input;
-    std::cout << rle(*input);
-    std::ofstream outputStream;
-    return 0;
-}
-std::string rle(char* input) {
-    std::string output;
-    char charbuf;
-    
+#include <fstream>
+static std::string rle(std::string input) {
+    for (int i = 0; i < input.size(); i++)
+    {
+        if ((input[i] < 'A' || input[i]>'Z')
+            && (input[i] < 'a' || input[i]>'z')) { // Not a latin letter
+            throw std::invalid_argument("The string contains a character that is not a latin letter.");
+        }
+    }
+    std::string output="";
+    char charbuf=NULL;
     int bufcount = 0;
     int outIteration = 0;
-    for (int i = 0; i++; i < 10000) {
+    for (int i = 0; i < input.size();i++) {
         if (input[i] == charbuf)
             bufcount++;
         else if (charbuf != NULL) {
             if (bufcount > 1) {
-                output.append(std::to_string(bufcount));
+                output+=std::to_string(bufcount)+charbuf;
             }
             else
-                output+=charbuf;
+                output += charbuf;
             charbuf = input[i];
             bufcount = 1;
         }
+        else {
+            bufcount = 1;
+            charbuf = input[0];
+        }
+    }
+    if (input.size() != 0) {
+        if (bufcount > 1) {
+            output += std::to_string(bufcount) + charbuf;
+        }
+        else
+            output += charbuf;
     }
     return output;
 }
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
 
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
+int main()
+{
+    std::string input;
+    std::ifstream inputStream("input.txt");
+    inputStream >> input;
+    inputStream.close();
+    std::ofstream outputStream("output.txt");
+    outputStream << rle(input);
+    outputStream.close();
+    return 0;
+}
