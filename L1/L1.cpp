@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿// Задание 7
+
+#include <iostream>
 #include <string>
 #include <fstream>
 static std::string rle(std::string input) {
